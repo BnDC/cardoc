@@ -12,7 +12,7 @@ class Trim(TimeStampModel):
 
 class Tire(TimeStampModel):
     width         = models.PositiveIntegerField()
-    asepect_ratio = models.PositiveIntegerField()
+    aspect_ratio = models.PositiveIntegerField()
     size          = models.PositiveIntegerField()
 
     class Meta:
