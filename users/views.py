@@ -33,7 +33,7 @@ class SignUpView(View):
         except JSONDecodeError:
             return JsonResponse({"message" : "JSON_DECODE_ERROR"}, status = 400)
 
-        return JsonResponse({"message" : "CREATED"}, status=201)
+        return JsonResponse({"message" : "OK"}, status=200)
 
 class SignInView(View):
     def post(self, request):
