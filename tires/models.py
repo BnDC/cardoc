@@ -11,9 +11,9 @@ class Trim(TimeStampModel):
         db_table = 'trims'
 
 class Tire(TimeStampModel):
-    width         = models.PositiveIntegerField()
+    width        = models.PositiveIntegerField()
     aspect_ratio = models.PositiveIntegerField()
-    size          = models.PositiveIntegerField()
+    size         = models.PositiveIntegerField()
 
     class Meta:
         db_table = 'tires'
