@@ -24,9 +24,9 @@ class TireView(View):
             
             with transaction.atomic():
                 for datum in data:
+                    email    = datum["id"]
                     trim_id  = datum['trimId']
                     response = cardoc.get_trim_information(trim_id)
-                    email    = datum["id"]
                     
                     user = User.objects.get(email = email)
                     
