@@ -13,7 +13,7 @@ class SignUpView(View):
     def post(self, request):
         try:
             data     = json.loads(request.body)
-            email    = data["email"]
+            email    = data["id"]
             password = data["password"]
 
             if User.objects.filter(email = email).exists():
@@ -39,7 +39,7 @@ class SignInView(View):
     def post(self, request):
         try:
             data     = json.loads(request.body)
-            email    = data["email"]
+            email    = data["id"]
             password = data["password"]
 
             user = User.objects.get(email = email)
